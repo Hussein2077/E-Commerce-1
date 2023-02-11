@@ -1,34 +1,36 @@
-import 'package:ecommerce_wael/controller/onboarding_controller.dart';
-import 'package:flutter/material.dart';
 
+import 'package:ecommerce_wael/controller/onboarding_controller.dart';
+import 'package:ecommerce_wael/core/constant/color.dart';
+import 'package:ecommerce_wael/veiw/widgets/CustomDotControllerOnBoarding.dart';
+import 'package:ecommerce_wael/veiw/widgets/custombotton.dart';
+import 'package:ecommerce_wael/veiw/widgets/customslider.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../widgets/CustomDotControllerOnBoarding.dart';
-import '../widgets/custombotton.dart';
-import '../widgets/customslider.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Get.put(OnBoardingControllerImplement());
+    Get.put(OnBoardingControllerImplement()) ;
     return Scaffold(
+        backgroundColor: AppColor.backgroundcolor,
         body: SafeArea(
-      child: Column(children: [
-        const Expanded(
-          flex: 3,
-          child: CustomSlider(),
-        ),
-        Expanded(
-            flex: 1,
-            child: Column(
-              children: const [
-                CustomDotControllerOnBoarding(),
-                Spacer(flex: 2),
-                CustomButtonOnBoarding()
-              ],
-            ))
-      ]),
-    ));
+          child: Column(children: [
+            const Expanded(
+              flex: 4,
+              child: CustomSliderOnBoarding(),
+            ),
+            Expanded(
+                flex: 1,
+                child: Column(
+                  children: const [
+                    CustomDotControllerOnBoarding(),
+                    Spacer(flex: 2),
+                    CustomButtonOnBoarding()
+                  ],
+                ))
+          ]),
+        ));
   }
 }

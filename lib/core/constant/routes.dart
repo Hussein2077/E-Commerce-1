@@ -1,4 +1,5 @@
 class AppRoutes {
   static const login = '/login';
-  static const lo = '';
+  static const String onBoarding = "/onboarding" ;
+
 }

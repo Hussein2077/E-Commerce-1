@@ -1,12 +1,11 @@
 import 'package:ecommerce_wael/controller/onboarding_controller.dart';
+import 'package:ecommerce_wael/core/constant/color.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/constant/color.dart';
-
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImplement> {
   const CustomButtonOnBoarding({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +15,7 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImplement> {
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 0),
           textColor: Colors.white,
           onPressed: () {
-            controller.next();
+            controller.next() ;
           },
           color: AppColor.primaryColor,
           child: const Text("Continue")),
