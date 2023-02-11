@@ -15,11 +15,11 @@ class Language extends GetView<LocaleController>{
         child: Column(
           children: [
             const  SizedBox(height: 150,),
-            // Text(
-            //   "1".tr,
-            //   style:
-            //       Theme.of(context).textTheme.headlineLarge!.copyWith(fontSize: 30),
-            // ),
+            Text(
+              "Choose Language".tr,
+              style:
+                  Theme.of(context).textTheme.headlineLarge!.copyWith(fontSize: 30,fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 50),
             CustomChangeLanguage(
               text: 'Arabic',

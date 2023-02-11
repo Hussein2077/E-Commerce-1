@@ -8,46 +8,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
 
-class LogInScreen extends StatelessWidget {
+
+class SignUpScreen extends StatelessWidget {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  // void signUserIn() async {
-  //   try {
-  //     await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //         email: emailController.text, password: passwordController.text);
-  //   } on FirebaseAuthException catch (e) {
-  //     showErrorMessage(e.code);
-  //   }
-  // }
 
-  /* void showErrorMessage(String message) {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: Text(message),
-          );
-        });
-  }
-
-  String _errorMessage = "";
-
-void validateEmail(String val) {
-    if (val.isEmpty) {
-      setState(() {
-        _errorMessage = "Email can not be empty";
-      });
-    } else if (!EmailValidator.validate(val, true)) {
-      setState(() {
-        _errorMessage = "Invalid Email Address";
-      });
-    } else {
-      setState(() {
-        _errorMessage = "";
-      });
-    }
-  }
-*/
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,7 +31,7 @@ void validateEmail(String val) {
                   Stack(
                     children: [
                       Container(
-                        height: 535,
+                        height: 600,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: HexColor("#ffffff"),
@@ -82,7 +47,7 @@ void validateEmail(String val) {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Log In",
+                                  "Sign Up",
                                   style: GoogleFonts.poppins(
                                     fontSize: 40,
                                     fontWeight: FontWeight.bold,
@@ -148,9 +113,28 @@ void validateEmail(String val) {
                                       const SizedBox(
                                         height: 20,
                                       ),
+                                      Text(
+                                        "Confirm Password",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 18,
+                                          color: HexColor("#8d8d8d"),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      MyTextField(
+                                        controller: passwordController,
+                                        hintText: "**************",
+                                        obscureText: true,
+                                        prefixIcon: const Icon(Icons.lock_outline),
+                                      ),
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
                                       MyButton(
                                         onPressed: (){},
-                                        buttonText: 'Submit',
+                                        buttonText: 'Sign Up',
                                       ),
                                       const SizedBox(
                                         height: 12,
@@ -160,23 +144,23 @@ void validateEmail(String val) {
                                         const EdgeInsets.fromLTRB(35, 0, 0, 0),
                                         child: Row(
                                           children: [
-                                            Text("Don't have an account? ",
+                                            Text("Do you have an account? ",
                                                 style: GoogleFonts.poppins(
                                                   fontSize: 15,
                                                   color: HexColor("#8d8d8d"),
                                                 )),
                                             TextButton(
-                                              child:const Text(
-                                                "Sign Up",
-                                              style: TextStyle(
-                                                color: AppColor.primaryColor
-                                              ),
+                                                child:const Text(
+                                                  "Log In",
+                                                  style: TextStyle(
+                                                      color: AppColor.primaryColor
+                                                  ),
 
-                                              ),
-                                              onPressed: () {
-                                                Get.toNamed(AppRoutes.signUp);
-                                              }
-                                              ),
+                                                ),
+                                                onPressed: () {
+                                                  Get.toNamed(AppRoutes.login);
+                                                }
+                                            ),
 
                                           ],
                                         ),
