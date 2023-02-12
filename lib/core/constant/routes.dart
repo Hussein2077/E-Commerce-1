@@ -4,7 +4,7 @@ class AppRoutes {
   static const signUp = '/signup';
   static const forgetPassword='/forgetPassword';
   static const verifyCode='/verifyCode';
-
+  static const resetPassword='/resetPassword';
   // on boarding
   static const String onBoarding = "/onboarding" ;
 

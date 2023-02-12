@@ -1,4 +1,4 @@
-import 'package:ecommerce_wael/controller/login_controller.dart';
+import 'package:ecommerce_wael/controller/reset_passwoed_controller.dart';
 import 'package:ecommerce_wael/veiw/widgets/my_auth_button.dart';
 import 'package:ecommerce_wael/veiw/widgets/my_auth_textfield.dart';
 import 'package:flutter/material.dart';
@@ -6,12 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
 
-class VerifyCodePage extends StatelessWidget {
-  const VerifyCodePage({super.key});
+class ResetPasswordPage extends StatelessWidget {
+  const ResetPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    LoginControllerImp controller = Get.put(LoginControllerImp());
+    ResetControllerImp controller = Get.put(ResetControllerImp());
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -44,9 +44,9 @@ class VerifyCodePage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Verify Code",
+                                  "Reset Your Password",
                                   style: GoogleFonts.poppins(
-                                    fontSize: 40,
+                                    fontSize: 30,
                                     fontWeight: FontWeight.bold,
                                     color: HexColor("#4f4f4f"),
                                   ),
@@ -62,7 +62,7 @@ class VerifyCodePage extends StatelessWidget {
                                     CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Email",
+                                        "New Password",
                                         style: GoogleFonts.poppins(
                                           fontSize: 18,
                                           color: HexColor("#8d8d8d"),
@@ -73,11 +73,28 @@ class VerifyCodePage extends StatelessWidget {
                                       ),
                                       MyTextField(
                                         onChanged: () {},
-                                        controller: controller.emailController,
-                                        hintText: "hello@gmail.com",
-                                        obscureText: false,
+                                        controller: controller.passwordController,
+                                        hintText: "**************",
+                                        obscureText: true,
                                         prefixIcon:
-                                        const Icon(Icons.mail_outline),
+                                        const Icon(Icons.lock_outline),
+                                      ),
+                                      Text(
+                                        "Confirm Password",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 18,
+                                          color: HexColor("#8d8d8d"),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      MyTextField(
+                                        controller: controller.rePasswordController,
+                                        hintText: "**************",
+                                        obscureText: true,
+                                        prefixIcon:
+                                        const Icon(Icons.lock_outline),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.fromLTRB(
@@ -97,8 +114,10 @@ class VerifyCodePage extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyButton(
-                                        onPressed: () {},
-                                        buttonText: 'Check',
+                                        onPressed: () {
+                                          controller.toSuccessPage();
+                                        },
+                                        buttonText: 'Reset',
                                       ),
                                       const SizedBox(
                                         height: 12,
