@@ -1,9 +1,9 @@
 
 import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
-import 'package:ecommerce_wael/veiw/widgets/CustomDotControllerOnBoarding.dart';
-import 'package:ecommerce_wael/veiw/widgets/custombotton.dart';
-import 'package:ecommerce_wael/veiw/widgets/customslider.dart';
+import 'package:ecommerce_wael/view/widgets/CustomDotControllerOnBoarding.dart';
+import 'package:ecommerce_wael/view/widgets/custombotton.dart';
+import 'package:ecommerce_wael/view/widgets/customslider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

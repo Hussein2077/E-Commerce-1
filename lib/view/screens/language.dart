@@ -1,6 +1,6 @@
 import 'package:ecommerce_wael/core/constant/routes.dart';
 import 'package:ecommerce_wael/core/localization/changelocale.dart';
-import 'package:ecommerce_wael/veiw/widgets/CustomChangeLanguage.dart';
+import 'package:ecommerce_wael/view/widgets/CustomChangeLanguage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

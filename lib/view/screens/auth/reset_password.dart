@@ -1,17 +1,17 @@
-import 'package:ecommerce_wael/controller/forget_password_controller.dart';
-import 'package:ecommerce_wael/veiw/widgets/my_auth_button.dart';
-import 'package:ecommerce_wael/veiw/widgets/my_auth_textfield.dart';
+import 'package:ecommerce_wael/controller/reset_password_controller.dart';
+import 'package:ecommerce_wael/view/widgets/my_auth_button.dart';
+import 'package:ecommerce_wael/view/widgets/my_auth_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
 
-class ForgetPasswordPage extends StatelessWidget {
-  const ForgetPasswordPage({super.key});
+class ResetPasswordPage extends StatelessWidget {
+  const ResetPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordImp controller = Get.put(ForgetPasswordImp());
+    ResetControllerImp controller = Get.put(ResetControllerImp());
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -44,9 +44,9 @@ class ForgetPasswordPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Check Email",
+                                  "Reset Your Password",
                                   style: GoogleFonts.poppins(
-                                    fontSize: 40,
+                                    fontSize: 30,
                                     fontWeight: FontWeight.bold,
                                     color: HexColor("#4f4f4f"),
                                   ),
@@ -56,13 +56,13 @@ class ForgetPasswordPage extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(15, 0, 0, 20),
+                                  const EdgeInsets.fromLTRB(15, 0, 0, 20),
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "Email",
+                                        "New Password",
                                         style: GoogleFonts.poppins(
                                           fontSize: 18,
                                           color: HexColor("#8d8d8d"),
@@ -73,11 +73,28 @@ class ForgetPasswordPage extends StatelessWidget {
                                       ),
                                       MyTextField(
                                         onChanged: () {},
-                                        controller: controller.emailController,
-                                        hintText: "hello@gmail.com",
-                                        obscureText: false,
+                                        controller: controller.passwordController,
+                                        hintText: "**************",
+                                        obscureText: true,
                                         prefixIcon:
-                                            const Icon(Icons.mail_outline),
+                                        const Icon(Icons.lock_outline),
+                                      ),
+                                      Text(
+                                        "Confirm Password",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 18,
+                                          color: HexColor("#8d8d8d"),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      MyTextField(
+                                        controller: controller.rePasswordController,
+                                        hintText: "**************",
+                                        obscureText: true,
+                                        prefixIcon:
+                                        const Icon(Icons.lock_outline),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.fromLTRB(
@@ -98,9 +115,9 @@ class ForgetPasswordPage extends StatelessWidget {
                                       ),
                                       MyButton(
                                         onPressed: () {
-                                          controller.toVerifyPage();
+                                          controller.toSuccessPage();
                                         },
-                                        buttonText: 'Check',
+                                        buttonText: 'Reset',
                                       ),
                                       const SizedBox(
                                         height: 12,

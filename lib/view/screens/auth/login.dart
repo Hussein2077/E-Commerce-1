@@ -1,20 +1,56 @@
-import 'package:ecommerce_wael/controller/signup_controller.dart';
+import 'package:ecommerce_wael/controller/login_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
-import 'package:ecommerce_wael/veiw/widgets/my_auth_button.dart';
-import 'package:ecommerce_wael/veiw/widgets/my_auth_textfield.dart';
+import 'package:ecommerce_wael/view/widgets/my_auth_button.dart';
+import 'package:ecommerce_wael/view/widgets/my_auth_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+class LogInScreen extends StatelessWidget {
+  const LogInScreen({super.key});
 
+  // void signUserIn() async {
+  //   try {
+  //     await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //         email: emailController.text, password: passwordController.text);
+  //   } on FirebaseAuthException catch (e) {
+  //     showErrorMessage(e.code);
+  //   }
+  // }
 
+  /* void showErrorMessage(String message) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(message),
+          );
+        });
+  }
+
+  String _errorMessage = "";
+
+void validateEmail(String val) {
+    if (val.isEmpty) {
+      setState(() {
+        _errorMessage = "Email can not be empty";
+      });
+    } else if (!EmailValidator.validate(val, true)) {
+      setState(() {
+        _errorMessage = "Invalid Email Address";
+      });
+    } else {
+      setState(() {
+        _errorMessage = "";
+      });
+    }
+  }
+*/
 
   @override
   Widget build(BuildContext context) {
-    SignUpControllerImp controller = Get.put(SignUpControllerImp());
+    LoginControllerImp controller = Get.put(LoginControllerImp());
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -31,7 +67,7 @@ class SignUpScreen extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        height: 600,
+                        height: 535,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: HexColor("#ffffff"),
@@ -47,7 +83,7 @@ class SignUpScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Sign Up",
+                                  "Log In",
                                   style: GoogleFonts.poppins(
                                     fontSize: 40,
                                     fontWeight: FontWeight.bold,
@@ -64,27 +100,6 @@ class SignUpScreen extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        "User Name",
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 18,
-                                          color: HexColor("#8d8d8d"),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      MyTextField(
-                                        onChanged: () {},
-                                        controller: controller.userNameController,
-                                        hintText: "User Name",
-                                        obscureText: false,
-                                        prefixIcon:
-                                        const Icon(Icons.person),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
                                       Text(
                                         "Email",
                                         style: GoogleFonts.poppins(
@@ -118,27 +133,6 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       Text(
-                                        "Phone",
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 18,
-                                          color: HexColor("#8d8d8d"),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      MyTextField(
-                                        onChanged: () {},
-                                        controller: controller.phoneController,
-                                        hintText: "Phone Number",
-                                        obscureText: false,
-                                        prefixIcon:
-                                        const Icon(Icons.phone),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      Text(
                                         "Password",
                                         style: GoogleFonts.poppins(
                                           fontSize: 18,
@@ -149,38 +143,35 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
-                                        controller: controller.passwordController,
+                                        controller:
+                                            controller.passwordController,
                                         hintText: "**************",
                                         obscureText: true,
                                         prefixIcon:
                                             const Icon(Icons.lock_outline),
-                                      ),
-                                      const SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "Confirm Password",
-                                        style: GoogleFonts.poppins(
-                                          fontSize: 18,
-                                          color: HexColor("#8d8d8d"),
-                                        ),
                                       ),
                                       const SizedBox(
                                         height: 10,
                                       ),
-                                      MyTextField(
-                                        controller: controller.passwordController,
-                                        hintText: "**************",
-                                        obscureText: true,
-                                        prefixIcon:
-                                            const Icon(Icons.lock_outline),
+                                      Center(
+                                        child: InkWell(
+                                            onTap: () {
+                                              controller.toForgetPasswordPage();
+                                            },
+                                            child: Text(
+                                              'Forget Password?',
+                                              style: GoogleFonts.poppins(
+                                                  fontSize: 13,
+                                                  color: HexColor("#8d8d8d"),
+                                                  fontWeight: FontWeight.bold),
+                                            )),
                                       ),
                                       const SizedBox(
-                                        height: 20,
+                                        height: 10,
                                       ),
                                       MyButton(
                                         onPressed: () {},
-                                        buttonText: 'Sign Up',
+                                        buttonText: 'Submit',
                                       ),
                                       const SizedBox(
                                         height: 12,
@@ -190,20 +181,20 @@ class SignUpScreen extends StatelessWidget {
                                             35, 0, 0, 0),
                                         child: Row(
                                           children: [
-                                            Text("Do you have an account? ",
+                                            Text("Don't have an account? ",
                                                 style: GoogleFonts.poppins(
                                                   fontSize: 15,
                                                   color: HexColor("#8d8d8d"),
                                                 )),
                                             TextButton(
                                                 child: const Text(
-                                                  "Log In",
+                                                  "Sign Up",
                                                   style: TextStyle(
                                                       color: AppColor
                                                           .primaryColor),
                                                 ),
                                                 onPressed: () {
-                                                  controller.toLogInPage();
+                                                  controller.toSignUpPage();
                                                 }),
                                           ],
                                         ),

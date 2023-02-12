@@ -4,7 +4,7 @@ import 'package:ecommerce_wael/core/localization/changelocale.dart';
 import 'package:ecommerce_wael/core/localization/translation.dart';
 import 'package:ecommerce_wael/core/service/services.dart';
 import 'package:ecommerce_wael/routes.dart';
-import 'package:ecommerce_wael/veiw/screens/language.dart';
+import 'package:ecommerce_wael/view/screens/language.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

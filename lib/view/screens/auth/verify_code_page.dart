@@ -1,19 +1,17 @@
-import 'package:ecommerce_wael/controller/login_controller.dart';
-import 'package:ecommerce_wael/controller/verify_controller.dart';
-import 'package:ecommerce_wael/veiw/widgets/otp_code.dart';
+
+import 'package:ecommerce_wael/view/widgets/otp_code.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:get/get.dart';
 class VerifyCodePage extends StatelessWidget {
-   VerifyCodePage({super.key});
+   const VerifyCodePage({super.key});
 
 
 
   @override
   Widget build(BuildContext context) {
 
-    VerifyControllerImp controller = Get.put(VerifyControllerImp());
+    // VerifyControllerImp controller = Get.put(VerifyControllerImp());
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -54,7 +52,7 @@ class VerifyCodePage extends StatelessWidget {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 20,
+                                  height: 40,
                                 ),
                               CustomOtp(),
 
