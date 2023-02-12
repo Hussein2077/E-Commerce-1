@@ -1,6 +1,6 @@
 
+import 'package:ecommerce_wael/controller/login_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
-import 'package:ecommerce_wael/core/constant/routes.dart';
 import 'package:ecommerce_wael/veiw/widgets/my_auth_button.dart';
 import 'package:ecommerce_wael/veiw/widgets/my_auth_textfield.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +9,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
 
 class LogInScreen extends StatelessWidget {
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+ const LogInScreen( {super.key});
+
   // void signUserIn() async {
   //   try {
   //     await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -48,8 +48,10 @@ void validateEmail(String val) {
     }
   }
 */
+
   @override
   Widget build(BuildContext context) {
+    LoginControllerImp controller= Get.put(LoginControllerImp());
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -110,7 +112,7 @@ void validateEmail(String val) {
                                       MyTextField(
                                         onChanged: () {
                                         },
-                                        controller: emailController,
+                                        controller: controller.emailController,
                                         hintText: "hello@gmail.com",
                                         obscureText: false,
                                         prefixIcon: const Icon(Icons.mail_outline),
@@ -140,7 +142,7 @@ void validateEmail(String val) {
                                         height: 10,
                                       ),
                                       MyTextField(
-                                        controller: passwordController,
+                                        controller: controller.passwordController,
                                         hintText: "**************",
                                         obscureText: true,
                                         prefixIcon: const Icon(Icons.lock_outline),
@@ -174,7 +176,7 @@ void validateEmail(String val) {
 
                                               ),
                                               onPressed: () {
-                                                Get.toNamed(AppRoutes.signUp);
+                                               controller.toSignUpPage();
                                               }
                                               ),
 
@@ -207,4 +209,6 @@ void validateEmail(String val) {
       ),
     );
   }
+
+
 }
