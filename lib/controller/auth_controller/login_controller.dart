@@ -8,6 +8,8 @@ abstract class LoginController extends GetxController {
   toSignUpPage();
 
   toForgetPasswordPage();
+
+  toHomeScreen();
 }
 
 class LoginControllerImp extends LoginController {
@@ -40,6 +42,12 @@ class LoginControllerImp extends LoginController {
   @override
   toForgetPasswordPage() {
     Get.toNamed(AppRoutes.forgetPassword);
+    throw UnimplementedError();
+  }
+
+  @override
+  toHomeScreen() {
+    Get.toNamed(AppRoutes.homePage);
     throw UnimplementedError();
   }
 }

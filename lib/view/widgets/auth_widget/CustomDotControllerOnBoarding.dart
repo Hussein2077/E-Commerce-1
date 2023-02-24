@@ -1,9 +1,10 @@
 
-import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
 import 'package:ecommerce_wael/data/datsource/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth_controller/onboarding_controller.dart';
 
 class CustomDotControllerOnBoarding extends StatelessWidget {
   const CustomDotControllerOnBoarding({Key? key}) : super(key: key);

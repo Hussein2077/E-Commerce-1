@@ -1,8 +1,9 @@
 
-import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:ecommerce_wael/data/datsource/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth_controller/onboarding_controller.dart';
 
 class CustomSliderOnBoarding extends GetView<OnBoardingControllerImplement> {
   const CustomSliderOnBoarding({Key? key}) : super(key: key);

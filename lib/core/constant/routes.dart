@@ -7,5 +7,8 @@ class AppRoutes {
   static const resetPassword='/resetPassword';
   // on boarding
   static const String onBoarding = "/onboarding" ;
+  //HOme Page
+  static const String homePage = "/homePage" ;
+
 
 }

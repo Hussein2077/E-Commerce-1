@@ -1,8 +1,9 @@
-import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth_controller/onboarding_controller.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImplement> {
   const CustomButtonOnBoarding({Key? key}) : super(key: key);

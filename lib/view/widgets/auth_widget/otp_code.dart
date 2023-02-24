@@ -1,7 +1,8 @@
-import 'package:ecommerce_wael/controller/verify_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth_controller/verify_controller.dart';
 class CustomOtp extends StatelessWidget {
    CustomOtp({Key? key}) : super(key: key);
 

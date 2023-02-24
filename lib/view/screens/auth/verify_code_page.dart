@@ -1,8 +1,9 @@
 
-import 'package:ecommerce_wael/view/widgets/otp_code.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../../widgets/auth_widget/otp_code.dart';
 class VerifyCodePage extends StatelessWidget {
    const VerifyCodePage({super.key});
 

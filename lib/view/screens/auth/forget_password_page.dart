@@ -1,10 +1,12 @@
-import 'package:ecommerce_wael/controller/forget_password_controller.dart';
-import 'package:ecommerce_wael/view/widgets/my_auth_button.dart';
-import 'package:ecommerce_wael/view/widgets/my_auth_textfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:get/get.dart';
+
+import '../../../controller/auth_controller/forget_password_controller.dart';
+import '../../widgets/auth_widget/my_auth_button.dart';
+import '../../widgets/auth_widget/my_auth_textfield.dart';
 
 class ForgetPasswordPage extends StatelessWidget {
   const ForgetPasswordPage({super.key});
