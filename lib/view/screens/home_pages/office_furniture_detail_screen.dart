@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../controller/office_furniture_controller.dart';
+import '../../../core/constant/color.dart';
 import '../../../core/test/app_color.dart';
 import '../../../core/test/app_style.dart';
 import '../../../data/model/furniture.dart';
@@ -21,6 +22,7 @@ class OfficeFurnitureDetailScreen extends StatelessWidget {
 
   PreferredSizeWidget _appBar(BuildContext context) {
     return AppBar(
+
       actions: [
         GetBuilder(
           builder: (OfficeFurnitureController controller) {
@@ -49,7 +51,7 @@ class OfficeFurnitureDetailScreen extends StatelessWidget {
   Widget bottomBar() {
     return Container(
       padding: const EdgeInsets.all(15),
-      height: 90,
+      height: 120,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

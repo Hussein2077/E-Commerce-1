@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/core/constant/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
@@ -17,13 +18,14 @@ class CartScreen extends StatelessWidget {
   PreferredSizeWidget _appBar() {
     return AppBar(
       title: const Text("Cart", style: h2Style),
+      backgroundColor: AppColor.primaryColor,
       actions: [
         IconButton(
           splashRadius: 20.0,
           onPressed: controller.clearCart,
           icon: const Icon(
             Icons.delete,
-            color: AppColor2.lightBlack,
+            color: Colors.black,
           ),
         )
       ],

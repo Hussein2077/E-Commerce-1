@@ -12,6 +12,7 @@ class OfficeFurnitureListScreen extends StatelessWidget {
 
   PreferredSize _appBar() {
     return PreferredSize(
+
       preferredSize: const Size.fromHeight(140),
       child: SafeArea(
         child: Padding(
@@ -22,8 +23,8 @@ class OfficeFurnitureListScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text("Hello Sina", style: h2Style),
-                  Text("Buy Your favorite desk", style: h3Style),
+                  Text("Hello Dr Nagdy", style: h2Style),
+                  Text("Buy Your favorite item", style: h3Style),
                 ],
               ),
               IconButton(

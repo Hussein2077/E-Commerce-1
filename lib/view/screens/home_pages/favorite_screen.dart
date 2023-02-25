@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/constant/color.dart';
 import '../../../core/test/app_style.dart';
 import '../../widgets/empty_widget.dart';
 import '../../widgets/furniture_list_view.dart';
@@ -13,6 +14,8 @@ class FavoriteScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Favorites", style: h2Style),
+        backgroundColor: AppColor.primaryColor,
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
