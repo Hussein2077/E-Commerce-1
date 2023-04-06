@@ -1,5 +1,4 @@
-
-import 'furniture_color.dart';
+import '../../src/model/furniture_color.dart';
 
 class Furniture {
   String title;

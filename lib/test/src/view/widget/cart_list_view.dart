@@ -1,9 +1,7 @@
-import 'package:ecommerce_wael/core/test/app_extension.dart';
+import 'package:ecommerce_wael/test/core/app_extension.dart';
 import 'package:flutter/material.dart';
-
-import '../../core/test/app_style.dart';
-import '../../data/model/furniture.dart';
-
+import '../../../core/app_style.dart';
+import '../../model/furniture.dart';
 
 class CartListView extends StatelessWidget {
   const CartListView({Key? key, required this.counterButton, required this.furnitureItems}) : super(key: key);
@@ -42,10 +40,10 @@ class CartListView extends StatelessWidget {
                     children: [
                       const Text("Color : ", style: h4Style),
                       CircleAvatar(
-                        radius: 15,
                         child: Container(
                           decoration: BoxDecoration(color: furniture.colors.where((element) => element.isSelected).toList().first.color, shape: BoxShape.circle),
                         ),
+                        radius: 15,
                       )
                     ],
                   )

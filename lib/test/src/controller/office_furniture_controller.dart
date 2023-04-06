@@ -1,8 +1,6 @@
-import 'package:ecommerce_wael/core/test/app_extension.dart';
 import 'package:get/get.dart';
-
-import '../data/model/furniture.dart';
-
+import '../../core/app_extension.dart';
+import '../../src/model/furniture.dart';
 
 class OfficeFurnitureController extends GetxController {
   RxInt currentBottomNavItemIndex = 0.obs;

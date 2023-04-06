@@ -21,7 +21,7 @@ class MyButton extends StatelessWidget {
           height: 55,
           width: 275,
           decoration: BoxDecoration(
-            color: AppColor.primaryColor,
+            color: AppColor1.primaryColor,
             borderRadius: BorderRadius.circular(30),
           ),
           child: Text(

@@ -1,10 +1,10 @@
 import 'package:ecommerce_wael/core/constant/routes.dart';
+import 'package:ecommerce_wael/test/src/view/screen/home_screen.dart';
 import 'package:ecommerce_wael/view/screens/auth/reset_password.dart';
 import 'package:ecommerce_wael/view/screens/auth/verify_code_page.dart';
 import 'package:ecommerce_wael/view/screens/auth/forget_password_page.dart';
 import 'package:ecommerce_wael/view/screens/auth/login.dart';
 import 'package:ecommerce_wael/view/screens/auth/signup.dart';
-import 'package:ecommerce_wael/view/screens/home_pages/home_screen.dart';
 import 'package:ecommerce_wael/view/screens/on_boarding.dart';
 import 'package:flutter/material.dart';
 

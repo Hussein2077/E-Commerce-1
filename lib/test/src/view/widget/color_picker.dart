@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../data/model/furniture_color.dart';
+import '../../model/furniture_color.dart';
 
 class ColorPicker extends StatefulWidget {
   final List<FurnitureColor> colors;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/test/app_style.dart';
-
+import '../../../core/app_style.dart';
 
 class CounterButton extends StatelessWidget {
   final Function() onIncrementSelected;

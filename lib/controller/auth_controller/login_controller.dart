@@ -10,6 +10,7 @@ abstract class LoginController extends GetxController {
   toForgetPasswordPage();
 
   toHomeScreen();
+
 }
 
 class LoginControllerImp extends LoginController {

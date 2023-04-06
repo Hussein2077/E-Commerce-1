@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+
+
 class MyTextField extends StatelessWidget {
   final controller;
   final String hintText;
@@ -11,17 +13,27 @@ class MyTextField extends StatelessWidget {
   final Icon prefixIcon;
   final Function()? onChanged;
 
-  const MyTextField(
+  final String? Function(String?)? validator;
+ final GlobalKey<FormState>formState=GlobalKey<FormState>();
+
+   MyTextField(
       {super.key,
       required this.controller,
       required this.hintText,
       required this.obscureText,
       required this.prefixIcon,
-      this.onChanged});
+      this.onChanged,
+      required this.validator,
+         formState,
+
+      });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+key: formState,
+
+      validator: validator,
       controller: controller,
       obscureText: obscureText,
       cursorColor: HexColor("#4f4f4f"),

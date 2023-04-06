@@ -13,7 +13,7 @@ class CustomChangeLanguage extends StatelessWidget {
       margin: const EdgeInsets.all(2),
       width: 150,
       decoration: const BoxDecoration(
-          color: AppColor.primaryColor,
+          color: AppColor1.primaryColor,
           borderRadius: BorderRadius.all(Radius.circular(16))),
       child: MaterialButton(
         onPressed: onPressed,

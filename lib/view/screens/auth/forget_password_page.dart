@@ -74,7 +74,14 @@ class ForgetPasswordPage extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
-                                        onChanged: () {},
+                                        validator: (val){
+                                        if(val!.isEmpty){
+                                          return 'Please enter you Email!';
+                                        }
+                                        },
+                                        onChanged: () {
+
+                                        },
                                         controller: controller.emailController,
                                         hintText: "hello@gmail.com",
                                         obscureText: false,

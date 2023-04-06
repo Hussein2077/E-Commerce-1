@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../view/widgets/fade_in_animation.dart';
+import '../src/view/widget/fade_in_animation.dart';
 
 extension StringExtension on String {
   String get addOverFlow {

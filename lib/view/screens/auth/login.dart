@@ -51,6 +51,7 @@ void validateEmail(String val) {
 
   @override
   Widget build(BuildContext context) {
+    GlobalKey<FormState>formState=GlobalKey<FormState>();
     LoginControllerImp controller = Get.put(LoginControllerImp());
     return SafeArea(
       child: Scaffold(
@@ -112,6 +113,11 @@ void validateEmail(String val) {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val){
+                                          if(val!.isEmpty){
+                                            return 'Please enter you Email!';
+                                          }
+                                        },
                                         onChanged: () {},
                                         controller: controller.emailController,
                                         hintText: "hello@gmail.com",
@@ -144,6 +150,12 @@ void validateEmail(String val) {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        formState: formState,
+                                        validator: (val){
+                                          if(val!.isEmpty){
+                                            return 'Please enter you Password!';
+                                          }
+                                        },
                                         controller:
                                             controller.passwordController,
                                         hintText: "**************",
@@ -171,8 +183,8 @@ void validateEmail(String val) {
                                         height: 10,
                                       ),
                                       MyButton(
-                                        onPressed: () {
-
+                                        onPressed:()async{
+                                          await  controller.login();
                                           controller.toHomeScreen();
                                         },
                                         buttonText: 'Submit',
@@ -194,10 +206,11 @@ void validateEmail(String val) {
                                                 child: const Text(
                                                   "Sign Up",
                                                   style: TextStyle(
-                                                      color: AppColor
+                                                      color: AppColor1
                                                           .primaryColor),
                                                 ),
                                                 onPressed: () {
+
                                                   controller.toSignUpPage();
                                                 }),
                                           ],

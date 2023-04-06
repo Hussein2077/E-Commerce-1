@@ -1,6 +1,7 @@
+import 'package:ecommerce_wael/core/constant/color.dart';
+import 'package:ecommerce_wael/test/core/app_color.dart';
 import 'package:flutter/material.dart';
-
-import '../../core/test/app_style.dart';
+import '../../../core/app_style.dart';
 
 class BottomBar extends StatelessWidget {
   final VoidCallback? onTap;
@@ -20,10 +21,9 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
-      height: 120,
+      height: 122,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,9 +39,12 @@ class BottomBar extends StatelessWidget {
               )
             ],
           ),
-          ElevatedButton(
-            onPressed: onTap,
-            child: Text(buttonLabel),
+          Container(
+            child: ElevatedButton(
+
+              onPressed: onTap,
+              child: Text(buttonLabel),
+            ),
           )
         ],
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../core/test/app_asset.dart';
+import '../../../core/app_asset.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
         children: [
           Image.asset(AppAsset.profilePic),
           const Text(
-            "Hello Sina!",
+            "Hello Hussein!",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           ),
           Row(
@@ -25,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               const Text(
-                "https://github.com/Mansurisodev",
+                "https://github.com/Hussein2077",
                 style: TextStyle(fontSize: 20),
               )
             ],

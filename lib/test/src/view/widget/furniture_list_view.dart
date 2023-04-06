@@ -1,10 +1,8 @@
-import 'package:ecommerce_wael/core/test/app_extension.dart';
-import 'package:ecommerce_wael/view/widgets/rating_bar.dart';
+import 'package:ecommerce_wael/test/core/app_extension.dart';
+import 'package:ecommerce_wael/test/src/view/widget/rating_bar.dart';
 import 'package:flutter/material.dart';
-
-import '../../core/test/app_style.dart';
-import '../../data/model/furniture.dart';
-
+import '../../../core/app_style.dart';
+import '../../model/furniture.dart';
 
 class FurnitureListView extends StatelessWidget {
   final bool isHorizontal;

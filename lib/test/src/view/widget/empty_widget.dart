@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/test/app_asset.dart';
-import '../../core/test/app_style.dart';
+import '../../../core/app_asset.dart';
+import '../../../core/app_style.dart';
 
 enum EmptyWidgetType { cart, favorite }
 

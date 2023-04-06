@@ -74,6 +74,11 @@ class ResetPasswordPage extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val){
+                                          if(val!.isEmpty){
+                                            return 'Please enter you new Password!';
+                                          }
+                                        },
                                         onChanged: () {},
                                         controller: controller.passwordController,
                                         hintText: "**************",
@@ -92,6 +97,11 @@ class ResetPasswordPage extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val){
+                                          if(val!.isEmpty){
+                                            return 'Please enter you Password again!';
+                                          }
+                                        },
                                         controller: controller.rePasswordController,
                                         hintText: "**************",
                                         obscureText: true,

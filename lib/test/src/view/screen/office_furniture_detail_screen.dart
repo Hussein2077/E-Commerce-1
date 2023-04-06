@@ -1,18 +1,16 @@
-import 'package:ecommerce_wael/core/test/app_extension.dart';
+import 'package:ecommerce_wael/test/core/app_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import '../../../controller/office_furniture_controller.dart';
-import '../../../core/constant/color.dart';
-import '../../../core/test/app_color.dart';
-import '../../../core/test/app_style.dart';
-import '../../../data/model/furniture.dart';
-import '../../widgets/color_picker.dart';
-import '../../widgets/counter_button.dart';
-import '../../widgets/rating_bar.dart';
+import '../../../core/app_color.dart';
+import '../../../core/app_style.dart';
+import '../../controller/office_furniture_controller.dart';
+import '../../model/furniture.dart';
+import '../widget/color_picker.dart';
+import '../widget/counter_button.dart';
+import '../widget/rating_bar.dart';
 import 'home_screen.dart';
 
 class OfficeFurnitureDetailScreen extends StatelessWidget {
@@ -22,7 +20,6 @@ class OfficeFurnitureDetailScreen extends StatelessWidget {
 
   PreferredSizeWidget _appBar(BuildContext context) {
     return AppBar(
-
       actions: [
         GetBuilder(
           builder: (OfficeFurnitureController controller) {
@@ -51,7 +48,7 @@ class OfficeFurnitureDetailScreen extends StatelessWidget {
   Widget bottomBar() {
     return Container(
       padding: const EdgeInsets.all(15),
-      height: 120,
+      height: 122,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -66,7 +63,7 @@ class OfficeFurnitureDetailScreen extends StatelessWidget {
             ],
           ),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: AppColor2.lightBlack, padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+            style: ElevatedButton.styleFrom(primary: AppColor.lightBlack, padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
             onPressed: () {
               controller.addToCart(furniture);
             },

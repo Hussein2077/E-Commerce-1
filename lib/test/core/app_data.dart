@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../data/model/bottom_navigation_item.dart';
-import '../../data/model/furniture.dart';
-import '../../data/model/furniture_color.dart';
+import '../src/model/furniture.dart';
+import '../src/model/furniture_color.dart';
 import 'app_asset.dart';
 
 class AppData {

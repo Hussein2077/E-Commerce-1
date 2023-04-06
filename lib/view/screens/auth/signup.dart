@@ -11,8 +11,6 @@ import '../../widgets/auth_widget/my_auth_textfield.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
     SignUpControllerImp controller = Get.put(SignUpControllerImp());
@@ -76,12 +74,17 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return 'Please enter you Name!';
+                                          }
+                                        },
                                         onChanged: () {},
-                                        controller: controller.userNameController,
+                                        controller:
+                                            controller.userNameController,
                                         hintText: "User Name",
                                         obscureText: false,
-                                        prefixIcon:
-                                        const Icon(Icons.person),
+                                        prefixIcon: const Icon(Icons.person),
                                       ),
                                       const SizedBox(
                                         height: 10,
@@ -97,6 +100,11 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return 'Please enter you Email!';
+                                          }
+                                        },
                                         onChanged: () {},
                                         controller: controller.emailController,
                                         hintText: "hello@gmail.com",
@@ -129,12 +137,16 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return 'Please enter you Phone!';
+                                          }
+                                        },
                                         onChanged: () {},
                                         controller: controller.phoneController,
                                         hintText: "Phone Number",
                                         obscureText: false,
-                                        prefixIcon:
-                                        const Icon(Icons.phone),
+                                        prefixIcon: const Icon(Icons.phone),
                                       ),
                                       const SizedBox(
                                         height: 10,
@@ -150,7 +162,13 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
-                                        controller: controller.passwordController,
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return 'Please enter you Password!';
+                                          }
+                                        },
+                                        controller:
+                                            controller.passwordController,
                                         hintText: "**************",
                                         obscureText: true,
                                         prefixIcon:
@@ -170,7 +188,13 @@ class SignUpScreen extends StatelessWidget {
                                         height: 10,
                                       ),
                                       MyTextField(
-                                        controller: controller.passwordController,
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return 'Please enter you Password again!';
+                                          }
+                                        },
+                                        controller:
+                                            controller.passwordController,
                                         hintText: "**************",
                                         obscureText: true,
                                         prefixIcon:
@@ -200,7 +224,7 @@ class SignUpScreen extends StatelessWidget {
                                                 child: const Text(
                                                   "Log In",
                                                   style: TextStyle(
-                                                      color: AppColor
+                                                      color: AppColor1
                                                           .primaryColor),
                                                 ),
                                                 onPressed: () {
